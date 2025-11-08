@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Magasin en Ligne</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+        <h1>⚙️ Nova Mech ⚙️</h1>
+        <nav>
+            <a href="">Acceuil</a>
+            <a href="#produit">Produits</a>
+            <a href="#Client">Clients</a>
+            <a href="#ventes">Suivi de ventes</a>
+        </nav>
+    </header>
+    <main>
+        <div id="Statics">
+            <h2 class="stat">Produits</h2>
+            <p>0</p>
+            <h2 class="stat">Clients</h2>
+            <p>0</p>
+            <h2 class="stat">Ventes</h2>
+            <p>0</p>
+        </div>
+
+
+        <div id="produit">
+            <h2>Ajouter un produit</h2>
+            <form action="" id="ajoutproduit">
+                <input type="text" placeholder="son nom....." required>
+                <input type="number" placeholder="son prix....." required>
+                <input type="text"" placeholder="stock...." required>
+                <button type="submit">Ajouter</button>
+            </form>    
+        </div>
+        <div id="listeproduit">
+            <h2>La liste des produits</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Stock</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="Client">
+            <h2>Ajouter un client</h2>
+            <form action="" id="ajoutclient">
+            <input type="text" placeholder="son nom....." required>
+            <input type="number" placeholder="sa ville....." required>
+            <input type="email" placeholder="son email...." required>
+            <button type="submit">Ajouter</button>
+        </div>
+        <div id="listeproduit">
+            <h2>La liste des clients disponibles</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Ville</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        
+        <div id="ventes">
+            <h2>Suivi de ventes 📊</h2>
+            <canvas id="suiviventes"></canvas>
+        </div> 
+    </main>
+    <footer>
+        <p>Mon magasin en ligne--Chahd Chalghoum</p>
+    </footer>
+</body>
+</html>

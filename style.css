@@ -1,0 +1,21 @@
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f7f8fa;
+  color: #333;
+}
+h1{
+    color: rgb(241, 218, 241);
+    font-family: 'Times New Roman', Times, serif;
+}
+header {
+  background-color: #94a7d3;
+  color: rgb(12, 12, 12);
+  text-align: center;
+  padding: 1rem 0;
+}
+nav a{
+    color: white;
+    margin: 0px;
+}

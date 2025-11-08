@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Magasin en Ligne</title>
+  <link rel="stylesheet" href="rik.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🛒 Dashboard - Mon Magasin</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Produits</a>
+      <a href="#">Clients</a>
+      <a href="#">Ventes</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <!-- Statistiques -->
+    <section class="stats">
+      <div class="card">
+        <h2>Produits</h2>
+        <p id="nbProduits">0</p>
+      </div>
+      <div class="card">
+        <h2>Clients</h2>
+        <p id="nbClients">0</p>
+      </div>
+      <div class="card">
+        <h2>Ventes (€)</h2>
+        <p id="nbVentes">0</p>
+      </div>
+    </section>
+
+    <!-- Tableau des produits -->
+    <section class="table-section">
+      <h2>Liste des Produits</h2>
+      <table id="tableProduits">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prix (€)</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Graphique -->
+    <section class="chart-section">
+      <h2>Ventes mensuelles</h2>
+      <canvas id="chartVentes"></canvas>
+    </section>
+
+    <!-- Tableau clients -->
+    <section class="table-section">
+      <h2>Liste des Clients</h2>
+      <table id="tableClients">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Ville</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Mon Magasin en Ligne — Créé par Chahd</p>
+  </footer>
+
+  <script src="eeee.js"></script>
+</body>
+</html>
