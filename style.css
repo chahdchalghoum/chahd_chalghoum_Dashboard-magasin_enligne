@@ -1,13 +1,12 @@
-
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #f7f8fa;
-  color: #333;
-}
+  color: #0d0c0c;
+  }
 h1{
-    color: rgb(241, 218, 241);
-    font-family: 'Times New Roman', Times, serif;
+  color: rgb(241, 218, 241);
+  font-family: 'Times New Roman', Times, serif;
 }
 header {
   background-color: #94a7d3;
@@ -17,5 +16,24 @@ header {
 }
 nav a{
     color: white;
-    margin: 0px;
+    margin: 0px 10px;
+}
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+}
+#Statics{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.stats{
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
