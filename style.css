@@ -4,36 +4,91 @@ body {
   background-color: #f7f8fa;
   color: #0d0c0c;
   }
-h1{
-  color: rgb(241, 218, 241);
-  font-family: 'Times New Roman', Times, serif;
-}
-header {
-  background-color: #94a7d3;
-  color: rgb(12, 12, 12);
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #2b2e4a, #1f2235);
+  color: white;
+  height: 100vh;
+  padding: 30px 20px;
+  position: fixed;
+}  
+.sidebar h2{
+  font-size: 30px;
   text-align: center;
-  padding: 1rem 0;
+  text-decoration: underline;
+  color: rgb(219, 223, 16);
 }
-nav a{
-    color: white;
-    margin: 0px 10px;
-}
-main {
-  max-width: 1000px;
-  margin: 20px auto;
+.sidebar a{
+  color: white;
+  margin: 18px 0;
+  cursor: pointer;
   padding: 10px;
+  border-radius: 8px;
 }
-#Statics{
+#menu{
+  margin-left: 300px;
+  width: 100%;
+}
+header h1{
+  color: rgb(5, 5, 89);
+}
+header p{
+  font-style: oblique;
+  color: rgb(5, 5, 89);
+}
+
+#statistiques{
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 15px;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 20px;
+  gap: 20px;
 }
 .stats{
   background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 180px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  flex: 1 1 200px;
+}
+.valeur{
+  color: rgb(2, 2, 39);
+}
+.ajout, .liste{
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 5px;
+}
+form{
+  gap: 10px;
+  display: flex;
+}
+form button{
+  background-color: rgb(3, 3, 78);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  size: 15px;
+}
+form button:hover{
+  background-color: rgb(1, 1, 33);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th,td{
+  text-align: left;
+
+}
+footer{
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: linear-gradient(180deg, #2b2e4a, #1f2235);
+  color: white;
+  padding: 10px;
+  margin-top: 30px;
+
 }
