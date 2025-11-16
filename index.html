@@ -6,97 +6,96 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-        <nav class="sidebar">
-            <h2>🛒 ShopBoard</h2>
-            <a href="">🏠 Accueil</a>
-            <a href="#produit">📦 Produits</a>
-            <a href="#Client">Clients</a>
-            <a href="#ventes">💰 Ventes</a>
-        </nav>
-    <div id="menu">
+  <nav class="sidebar">
+    <h2>🛒 ShopBoard</h2>
+    <a href="#statistiques">Dashboard</a>
+    <a href="#produits">Produits</a>
+    <a href="#clients">Clients</a>
+    <a href="#charts">Statistiques</a>
+  </nav>
+
+  <div id="menu">
+
     <header>
       <h1>Tableau de bord</h1>
       <p>Bienvenue, Administrateur 👋</p>
     </header>
-    
-    <main>
+
+    <!-- statistiques -->
     <section id="statistiques">
-      <div class="stats">
-        <h3>Revenus</h3>
-        <p class="valeur">7 580dt</p>
-      </div>
-      <div class="stats">
-        <h3>Commandes</h3>
-        <p class="valeur">89</p>
-      </div>
-      <div class="stats">
-        <h3>Clients</h3>
-        <p class="valeur"> 245</p>
-      </div>
-      <div class="stats">
-        <h3>Produits</h3>
-        <p class="valeur">5</p>
-      </div>
+      <div class="stats"><h3>Revenus</h3><p class="valeur">7 580 dt</p></div>
+      <div class="stats"><h3>Commandes</h3><p class="valeur">89</p></div>
+      <div class="stats"><h3>Clients</h3><p id="nbClients" class="valeur">0</p></div>
+      <div class="stats"><h3>Produits</h3><p id="nbProduits" class="valeur">0</p></div>
     </section>
-    
+
+    <!-- AJOUT PRODUIT -->
     <section id="produits" class="ajout">
       <h2>Ajouter un produit</h2>
       <form id="ajoutproduit">
         <input type="text" id="nomProduit" placeholder="Nom du produit" required>
-        <input type="number" id="prixProduit" placeholder="Prix(dt)" required>
+        <input type="number" id="prixProduit" placeholder="Prix (dt)" required>
         <input type="number" id="stockProduit" placeholder="Stock" required>
         <button type="submit">Ajouter</button>
       </form>
     </section>
+
+    <!-- tableau de produits -->
     <section class="liste">
       <h2>🧾 Liste des Produits</h2>
       <table id="tableProduits">
         <thead>
-          <tr>
-            <th>Nom</th>
-            <th>Prix(dt)</th>
-            <th>Stock</th>
-          </tr>
+          <tr><th>Nom</th><th>Prix</th><th>Stock</th><th>Action</th></tr>
         </thead>
         <tbody></tbody>
       </table>
     </section>
-    
-    <section  id="clients" class="ajout">
+
+    <!-- ajouter un client dans le tableau -->
+    <section id="clients" class="ajout">
       <h2>Ajouter un client</h2>
       <form id="ajoutclient">
-        <input type="text" id="nomClient" placeholder="Nom du client" required>
+        <input type="text" id="nomClient" placeholder="Nom" required>
         <input type="email" id="emailClient" placeholder="Email" required>
         <input type="text" id="villeClient" placeholder="Ville" required>
         <button type="submit">Ajouter</button>
       </form>
     </section>
+
+    <!--table de produits--> 
     <section class="liste">
       <h2>👥 Liste des Clients</h2>
-      <input type="text" id="rechercheClient" placeholder="🔍 Rechercher un client..." />
       <table id="tableClients">
         <thead>
-          <tr>
-            <th>Nom</th>
-            <th>Email</th>
-            <th>Ville</th>
-          </tr>
+          <tr><th>Nom</th><th>Email</th><th>Ville</th><th>Action</th></tr>
         </thead>
         <tbody></tbody>
       </table>
-    </section>    
+    </section>
 
-    <section id="suivideventes">
-      <div class="chart-container">
-        <h3>Ventes mensuelles 📈</h3>
-        <canvas id="salesChart"></canvas>
+    
+    <section id="charts">
+      <div class="grid">
+        <div class="chart-box">
+          <h3>📈 Ventes mensuelles</h3>
+          <canvas id="salesChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+          <h3>🧺 Répartition des catégories</h3>
+          <canvas id="categoryChart"></canvas>
+        </div>
       </div>
-    </main>
-    </div>
+    </section>
+
     <footer>
-        <p>Mon magasin en ligne--Chahd Chalghoum</p>
+      <p>Mon magasin en ligne — Chahd Chalghoum</p>
     </footer>
-    <script src="script.js"></script>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

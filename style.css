@@ -1,94 +1,163 @@
+/* ------- GLOBAL ------- */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f7f8fa;
-  color: #0d0c0c;
-  }
+  background-color: #f5f6fa;
+  display: flex;
+}
+
+/* ------- SIDEBAR ------- */
 .sidebar {
-  width: 220px;
-  background: linear-gradient(180deg, #2b2e4a, #1f2235);
+  width: 240px;
+  background: linear-gradient(180deg, #1e1f36, #151627);
   color: white;
   height: 100vh;
   padding: 30px 20px;
   position: fixed;
-}  
-.sidebar h2{
-  font-size: 30px;
-  text-align: center;
-  text-decoration: underline;
-  color: rgb(219, 223, 16);
-}
-.sidebar a{
-  color: white;
-  margin: 18px 0;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 8px;
-}
-#menu{
-  margin-left: 300px;
-  width: 100%;
-}
-header h1{
-  color: rgb(5, 5, 89);
-}
-header p{
-  font-style: oblique;
-  color: rgb(5, 5, 89);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.2);
 }
 
-#statistiques{
+.sidebar h2 {
+  font-size: 26px;
+  text-align: center;
+  color: #f3c623;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px;
+  margin: 12px 0;
+  color: white;
+  background: rgba(255,255,255,0.07);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ------- CONTENT ------- */
+#menu {
+  margin-left: 260px;
+  padding: 25px;
+  width: calc(100% - 260px);
+}
+
+header h1 {
+  color: #1d2d73;
+}
+
+header p {
+  font-style: italic;
+  color: #1d2d73;
+}
+
+/* ------- STATISTICS ------- */
+#statistiques {
   display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin-bottom: 20px;
   gap: 20px;
 }
-.stats{
+
+.stats {
   background: white;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  flex: 1 1 200px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  flex: 1;
+  text-align: center;
 }
-.valeur{
-  color: rgb(2, 2, 39);
-}
-.ajout, .liste{
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  margin-bottom: 5px;
-}
-form{
-  gap: 10px;
-  display: flex;
-}
-form button{
-  background-color: rgb(3, 3, 78);
-  color: white;
+
+.valeur {
+  font-size: 22px;
+  color: #0b1b4d;
   font-weight: bold;
-  border-radius: 5px;
-  size: 15px;
 }
-form button:hover{
-  background-color: rgb(1, 1, 33);
+
+/* ------- FORM & TABLE ------- */
+.ajout, .liste {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
 }
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+form button {
+  background: #1d2d73;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #101a4a;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
 }
-th,td{
-  text-align: left;
 
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
 }
-footer{
-  text-align: center;
-  background: linear-gradient(180deg, #2b2e4a, #1f2235);
+
+th {
+  background: #eaeaea;
+}
+
+.delete-btn {
+  background: #d60000;
   color: white;
-  padding: 10px;
-  margin-top: 30px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
 
+.delete-btn:hover {
+  background: #900;
+}
+
+/* ------- CHARTS ------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.chart-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+/* ------- FOOTER ------- */
+footer {
+  background: #151627;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+tbody{
+  text-align: center;
 }
