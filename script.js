@@ -18,6 +18,11 @@ let clients = [
 const tableP = document.querySelector("#tableProduits tbody");
 const tableC = document.querySelector("#tableClients tbody");
 
+function majStats() {
+  document.getElementById("nbProduits").textContent = produits.length;
+  document.getElementById("nbClients").textContent = clients.length;
+}
+
 /*Afficher les deux tableaux des clients et produits*/
 function afficherProduits() {
   tableP.innerHTML = "";
@@ -72,6 +77,17 @@ document.getElementById("ajoutclient").addEventListener("submit", e => {
   afficherClients();
   e.target.reset();
 });
+
+/*supprimer un produit ou un client dans un tableau*/
+function supprimerProduit(i) {
+  produits.splice(i, 1);
+  afficherProduits();
+}
+
+function supprimerClient(i) {
+  clients.splice(i, 1);
+  afficherClients();
+}
 
 /*graphe d'un chart*/
 new Chart(document.getElementById("salesChart"), {
