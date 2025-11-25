@@ -2,19 +2,21 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f5f6fa;
+  background: linear-gradient(180deg, #e1e1e9, #f8f8ff);
   display: flex;
+  color: #111827;
 }
 
 /* ------- SIDEBAR ------- */
 .sidebar {
   width: 240px;
-  background: linear-gradient(180deg, #1e1f36, #151627);
+  background: linear-gradient(180deg, #030765, #6064bc);
   color: white;
   height: 100vh;
   padding: 30px 20px;
   position: fixed;
-  box-shadow: 4px 0 12px rgba(0,0,0,0.2);
+  box-shadow: 6px 0 30px rgba(20,22,43,0.12);
+  gap: 18px;
 }
 
 .sidebar h2 {
@@ -38,10 +40,10 @@ body {
   background: rgba(255,255,255,0.2);
 }
 
-/* ------- CONTENT ------- */
+/* ------- le contenu de la dashboard ------- */
 #menu {
   margin-left: 260px;
-  padding: 25px;
+  padding: 40px;
   width: calc(100% - 260px);
 }
 
@@ -54,7 +56,7 @@ header p {
   color: #1d2d73;
 }
 
-/* ------- STATISTICS ------- */
+/* ------- les statistiques------- */
 #statistiques {
   display: flex;
   gap: 20px;
@@ -67,6 +69,9 @@ header p {
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   flex: 1;
   text-align: center;
+}
+.stats:hover{
+  transform: translateY(-8px);
 }
 
 .valeur {
@@ -90,7 +95,7 @@ form {
 }
 
 form button {
-  background: #1d2d73;
+  background: #122a93;
   color: white;
   border: none;
   padding: 8px 14px;
@@ -99,7 +104,13 @@ form button {
 }
 
 form button:hover {
-  background: #101a4a;
+  background: #091d7e;
+}
+div.recherche{
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 50px;
 }
 
 table {
@@ -151,8 +162,9 @@ canvas {
 
 /* ------- FOOTER ------- */
 footer {
-  background: #151627;
+  background: #030765;
   color: white;
+  font-style: italic;
   text-align: center;
   padding: 15px;
   margin-top: 40px;

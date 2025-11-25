@@ -10,17 +10,17 @@
 <body>
   <nav class="sidebar">
     <h2>🛒 ShopBoard</h2>
-    <a href="#statistiques">Dashboard</a>
-    <a href="#produits">Produits</a>
-    <a href="#clients">Clients</a>
-    <a href="#charts">Statistiques</a>
+    <a href="#statistiques">📊 Dashboard</a>
+    <a href="#produits">📦 Produits</a>
+    <a href="#clients">👥 Clients</a>
+    <a href="#charts">📈 Statistiques</a>
   </nav>
 
   <div id="menu">
 
     <header>
-      <h1>Tableau de bord</h1>
-      <p>Bienvenue, Administrateur 👋</p>
+      <h1>Bienvenue, Administrateur 👋</h1>
+      <p>Voici un aperçu de votre activité aujourd’hui.</p>
     </header>
 
     <!-- statistiques -->
@@ -45,6 +45,9 @@
     <!-- tableau de produits -->
     <section class="liste">
       <h2>🧾 Liste des Produits</h2>
+      <div class="recherche">
+        <input  id="rechercheproduit" placeholder="recherche produit.....">
+      </div>
       <table id="tableProduits">
         <thead>
           <tr><th>Nom</th><th>Prix</th><th>Stock</th><th>Action</th></tr>
@@ -67,6 +70,9 @@
     <!--table de produits--> 
     <section class="liste">
       <h2>👥 Liste des Clients</h2>
+      <div class="recherche">
+        <input  id="rechercheclients" placeholder="recherche client(nom,email,ville)....">
+      </div>
       <table id="tableClients">
         <thead>
           <tr><th>Nom</th><th>Email</th><th>Ville</th><th>Action</th></tr>
