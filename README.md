@@ -1,6 +1,6 @@
 # Dashboard Magasin en ligne
 **Nom :** Chahd Chalghoum  
-**Projet :** Dashboard web pour la gestion d’un magasin en ligne
+**Projet :** Dashboard web pour la gestion d’une magasin en ligne
 ## Description
 Ce projet est une dashboard  pour un magasin en ligne, conçue pour faciliter la gestion des clients et des produits.
 L’interface permet à l’administrateur de visualiser, ajouter, modifier et supprimer des données relatives aux produits et aux clients, offrant ainsi un contrôle complet sur le fonctionnement du magasin.
