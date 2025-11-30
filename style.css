@@ -41,7 +41,7 @@ body {
       transform: translateX(6px);
     }
 
-    /* ------- CONTENU ------- */
+    /* ------- LE CONTENU ------- */
     #menu {
       margin-left: 260px;
       padding: 40px;
@@ -171,7 +171,7 @@ body {
     tbody tr:hover td {
       background: #2a2f4a;
     }
-
+    
     .delete-btn {
       background: #ef4444;
       color: white;
@@ -200,7 +200,7 @@ body {
     }
 
     .edit-btn:hover {
-      background: #eab308;
+      background: #e7e3d7;
       color: #ffffff;
     }
 
@@ -223,7 +223,8 @@ body {
     canvas {
       width: 100% !important;
       height: 320px !important;
-    }
+    } 
+    
 
     /* FOOTER */
     footer {

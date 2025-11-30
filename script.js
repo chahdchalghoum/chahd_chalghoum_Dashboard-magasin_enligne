@@ -36,6 +36,7 @@ function afficherProduits() {
         <button class="delete-btn">Supprimer</button>
       </td>
     `;
+    //---Modifier les infos dans le tableau des produits
     const editBtn = tr.querySelector(".edit-btn");
     let isEditing = false;
 
@@ -51,7 +52,7 @@ function afficherProduits() {
       } else {
         produits[i].nom = tds[0].textContent;
         produits[i].prix = parseFloat(tds[1].textContent);
-        produits[i].stock = parseInt(tds[2].textContent);
+        produits[i].stoczsk = parseInt(tds[2].textContent);
         tds[0].contentEditable = false;
         tds[1].contentEditable = false;
         tds[2].contentEditable = false;
@@ -86,6 +87,7 @@ function afficherClients() {
         <button class="delete-btn">Supprimer</button>
       </td>
     `;
+    //---modifier les infos dans le tableau des clients---
     const editBtn = tr.querySelector(".edit-btn");
     let isEditing = false;
 
@@ -146,7 +148,7 @@ document.getElementById("ajoutclient").addEventListener("submit", e => {
   e.target.reset();
 });
 
-// ===== Recherche Produits =====
+// ===== Recherche d'un Produit =====
 document.getElementById("rechercheproduit").addEventListener("input", e => {
   const search = e.target.value.toLowerCase();
   tableP.querySelectorAll("tr").forEach(tr => {
@@ -157,7 +159,7 @@ document.getElementById("rechercheproduit").addEventListener("input", e => {
   });
 });
 
-// ===== Recherche Clients =====
+// ===== Recherche d'un Client =====
 document.getElementById("rechercheclients").addEventListener("input", e => {
   const search = e.target.value.toLowerCase();
   tableC.querySelectorAll("tr").forEach(tr => {
@@ -208,7 +210,20 @@ new Chart(categoryChartCtx, {
   },
   options: {
     responsive: true,
-    plugins: { legend: { position: "bottom" } }
+    plugins: { 
+      legend: {
+         position: "bottom" ,
+         labels: {
+          color: "#f6f7fbff", 
+          font: {
+            size: 11,
+            weight: "bold"
+          }
+        }
+        } 
+      }
+
+    
   }
 });
 
